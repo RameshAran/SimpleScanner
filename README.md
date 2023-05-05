@@ -46,6 +46,9 @@ You can also add customizations to the overlay view to show additional overlays 
 scannerViewController.overlayContainerView.addSubview(customOverlayView)
 ```
 
+![image](https://user-images.githubusercontent.com/2862173/236513481-fdbf5196-04a1-481f-a918-7bbe5a00ebc8.png)
+
+
 ## Requirements
 
 This sample code requires Xcode 12 or later and a minimum deployment target of iOS 14 or later.
