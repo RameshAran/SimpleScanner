@@ -7,22 +7,27 @@ This sample code demonstrates how to use DataScannerViewController in your iOS a
 To use DataScannerViewController in your app, follow these steps:
 
 1. Clone or download the sample code from this repository.
-2. Copy the `DataScannerViewController.swift` file into your Xcode project.
-3. Import the `Vision` framework and the `DataScannerViewController` class into your code.
+2. Copy the `DocumentScannerView.swift` file into your Xcode project.
 
 ## Usage
 
-To use DataScannerViewController in your app, create an instance of the class and present it from your view controller:
+To use DocumentScannerView in your app, create an instance of the class and present it from your view controller:
 
 ```swift
-let scannerViewController = DataScannerViewController(
-    recognizedDataTypes: [DataScannerViewController.textDataType, .barcode()],
-    qualityLevel: .accurate,
-    recognizesMultipleItems: false,
-    isHighFrameRateTrackingEnabled: false,
-    isHighlightingEnabled: false
-)
-present(scannerViewController, animated: true)
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Scan a document")
+                    .font(.title)
+                    .padding()
+                DocumentScannerView()
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+            }
+        }
+    }
+}
 ```
 
 You can customize the recognized data types, quality level, and other settings to suit your needs.
